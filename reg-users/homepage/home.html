@@ -1,0 +1,230 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      target="_blank"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Find an apartment</title>
+    <link rel="stylesheet" target="_blank" href="./home.css" />
+    <link rel="stylesheet" target="_blank" href="../filter-section.css" />
+    <link rel="stylesheet" target="_blank" href="../reg-user.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav-mobile">
+        <button class="back-btn" aria-label="Go back">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M15 18L9 12L15 6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <h1 class="nav-title">Find Apartment</h1>
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M3 12H21M3 6H21M3 18H21"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="nav-dropdown">
+        <div class="dropdown-links">
+          <a class="dropdown-header" target="_blank" href="./home.html"
+            >Roompal</a
+          >
+          <a target="_blank" href="./home.html">Find Apartment</a>
+          <a target="_blank" href="../roommate/roommate.html">Find roommate</a>
+          <a target="_blank" href="../list-a-house/list-a-house.html"
+            >List a House</a
+          >
+          <a target="_blank" href="../message/in-app-message.html">Message</a>
+          <a target="_blank" href="">Notification</a>
+          <a target="_blank" href="../need-help/need-help.html">Need Help</a>
+        </div>
+      </div>
+      <div class="nav-side__1">
+        <a class="home" target="_blank" href="./home.html">roompal</a>
+        <div class="link">
+          <a target="_blank" href="./home.html">Find an Apartment</a>
+          <a target="_blank" href="../roommate/roommate.html"
+            >Find a roommate</a
+          >
+          <a target="_blank" href="../list-a-house/list-a-house.html"
+            >List a House</a
+          >
+          <a target="_blank" href="../message/in-app-message.html">Messages</a>
+        </div>
+      </div>
+      <div class="side-two">
+        <div class="notification-dropdown">
+          <span class="notification"
+            ><img src="../images/notification-bell.png" alt=""
+          /></span>
+          <div class="notification-modal">
+            <div class="frame-parent">
+              <div class="frame-wrapper">
+                <div class="notifications-wrapper">
+                  <div class="notifications">Notifications</div>
+                </div>
+              </div>
+              <!-- Notifications will be dynamically loaded here -->
+            </div>
+          </div>
+        </div>
+        <button class="logout-btn" onclick="handleLogout()" title="Logout">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+          </svg>
+          Logout
+        </button>
+        <span
+          ><a
+            class="need-help"
+            target="_blank"
+            href="../need-help/need-help.html"
+            >Need Help?</a
+          ></span
+        >
+      </div>
+    </nav>
+    <aside>
+      <div class="location-div">
+        <p>Location</p>
+        <div class="location-dropdown">
+          <div>
+            <span>Lagos</span>
+            <img src="../images/light-chevron.png" />
+          </div>
+        </div>
+      </div>
+      <div class="filter-container">
+        <div class="filter-sections" id="filterSections"></div>
+        <!-- <div class="filter-count" id="filterCount">
+          <div class="count-badge" id="countBadge">0</div>
+        </div> -->
+        <div class="filter-actions">
+          <button class="btn btn-reset" id="resetBtn">Clear</button>
+          <button class="btn btn-filter" id="filterBtn">Filter</button>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <section>
+        <div class="hero-section rounded-2xl">
+          <h2 class="font-medium text-2xl">
+            Search for your Dream Apartment Here
+          </h2>
+          <div class="ranges-div bg-white">
+            <div class="find-container">
+              <p>Location</p>
+              <select class="find-apartment" id="search-location" name="location">
+                <option value="">All Locations</option>
+                <option value="Lagos">Lagos</option>
+                <option value="Abia">Abia</option>
+                <option value="Abuja">Abuja</option>
+                <option value="Ibadan">Ibadan</option>
+                <option value="Delta">Delta</option>
+                <option value="Akwa Ibom">Akwa Ibom</option>
+              </select>
+            </div>
+
+            <div class="find-container">
+              <p>Pricing Range</p>
+              <select class="find-apartment" id="search-price-range" name="priceRange">
+                <option value="">All Prices</option>
+                <option value="100k - 200k">100k - 200k</option>
+                <option value="200k - 400k">200k - 400k</option>
+                <option value="400k - 600k">400k - 600k</option>
+                <option value="600k - 1M">600k - 1M</option>
+                <option value="1M - 2M">1M - 2M</option>
+                <option value="2M - 5M">2M - 5M</option>
+                <option value="5M and above">5M and above</option>
+              </select>
+            </div>
+            <div class="find-container">
+              <p>Apartment Type</p>
+              <select class="find-apartment" id="search-apartment-type" name="apartmentType">
+                <option value="">All Types</option>
+                <option value="Apartments / Flats">Apartments / Flats</option>
+                <option value="Self-contained rooms">Self-contained rooms</option>
+                <option value="Shared Apartments">Shared Apartments</option>
+                <option value="Detached Houses">Detached Houses</option>
+                <option value="Semi-detached Houses">Semi-detached Houses</option>
+                <option value="Duplexes">Duplexes</option>
+                <option value="Bungalows">Bungalows</option>
+                <option value="Serviced Apartments">Serviced Apartments</option>
+              </select>
+            </div>
+            <div class="search-box">
+              <button class="search-btn mt-10">Search</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mobile-tab" style="display: none">
+        <div>
+          <h2>Popular Searches</h2>
+          <div class="mobile-filter-dropdown">
+            <img class="w-24 h-24" src="../images/search.png" />
+            <aside>
+              <div class="location-div w-77.25">
+                <p>Location</p>
+                <div class="location-dropdown bg-white h-11 flex flex-col">
+                  <div>
+                    <span>Lagos</span>
+                    <img
+                      class="w-4 object-cover"
+                      src="../images/light-chevron.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="filter-container">
+                <div class="filter-sections" id="filterSections"></div>
+                <div class="filter-actions">
+                  <button class="btn btn-reset" id="resetBtn">Clear</button>
+                  <button class="btn btn-filter" id="filterBtn">Filter</button>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+      <section class="apartment-section bg-white">
+        <div class="apartment-frame" id="property-listings">
+          <!-- Properties will be loaded dynamically here -->
+        </div>
+      </section>
+    </main>
+    <link rel="stylesheet" href="../../assets/styles/toast.css" />
+    <link rel="stylesheet" href="../../assets/styles/loading.css" />
+    <script src="../../assets/scripts/api.js"></script>
+    <script src="../../assets/scripts/toast.js"></script>
+    <script src="../../assets/scripts/notificationIntegration.js"></script>
+    <script src="../../assets/scripts/toast.js"></script>
+    <script src="../../assets/scripts/logout.js"></script>
+    <script src="../../assets/scripts/propertyUtils.js"></script>
+    <script src="home.js"></script>
+    <script src="../../assets/scripts/homepageProperties.js"></script>
+    <script src="../../assets/scripts/authGuard.js"></script>
+    <script src="../reg-user-dropdown.js"></script>
+  </body>
+</html>

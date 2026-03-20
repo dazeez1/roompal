@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List a House - Roompal</title>
+    <link rel="stylesheet" href="list-a-house.css" />
+    <link rel="stylesheet" href="../reg-user.css" />
+    <link rel="stylesheet" href="../../assets/styles/toast.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav-mobile">
+        <button class="back-btn" aria-label="Go back" onclick="window.history.back()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <h1 class="nav-title">List a House</h1>
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="nav-dropdown">
+        <div class="dropdown-links">
+          <a class="dropdown-header" href="../homepage/home.html">Roompal</a>
+          <a href="../homepage/home.html">Find Apartment</a>
+          <a href="../roommate/roommate.html">Find roommate</a>
+          <a href="./list-a-house.html">List a House</a>
+          <a href="../message/in-app-message.html">Message</a>
+          <a href="../need-help/need-help.html">Need Help</a>
+        </div>
+      </div>
+      <div class="nav-side__1">
+        <a class="home" href="../homepage/home.html">roompal</a>
+        <div class="link">
+          <a href="../homepage/home.html">Find an Apartment</a>
+          <a href="../roommate/roommate.html">Find a roommate</a>
+          <a href="./list-a-house.html">List a House</a>
+          <a href="../message/in-app-message.html">Messages</a>
+        </div>
+      </div>
+      <div class="side-two">
+        <button class="logout-btn" onclick="handleLogout()" title="Logout">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+          </svg>
+          Logout
+        </button>
+        <span><a class="need-help" href="../need-help/need-help.html">Need Help?</a></span>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero-section">
+        <div class="heading-text">
+          <h1>Listing form</h1>
+          <p>Fill the above details to list an apartment in our platform</p>
+        </div>
+
+        <div class="info-input-parent-container">
+          <div class="form-card">
+            <form id="propertyForm" class="info-input-parent">
+              
+              <!-- Property Type Section -->
+              <div class="form-section">
+                <h3 class="section-title">Property Information</h3>
+                
+                <div class="selector-group">
+                  <label class="field-label">What type of space are you listing? *</label>
+                  <select name="apartmentType" id="apartmentType" required class="form-select">
+                    <option value="" selected disabled>Choose option</option>
+                    <option value="Apartments / Flats">Apartment / Flat</option>
+                    <option value="Self-contained rooms">Self-contained Rooms</option>
+                    <option value="Shared Apartments">Shared Apartments</option>
+                    <option value="Detached Houses">Detached Houses</option>
+                    <option value="Semi-detached Houses">Semi-detached Houses</option>
+                    <option value="Duplexes">Duplexes</option>
+                    <option value="Bungalows">Bungalow</option>
+                    <option value="Serviced Apartments">Serviced Apartment</option>
+                  </select>
+                </div>
+
+                <div class="selector-group">
+                  <label class="field-label">Is this an entire place or a shared space? *</label>
+                  <select name="spaceType" id="spaceType" required class="form-select">
+                    <option value="" selected disabled>Choose option</option>
+                    <option value="Entire Place">Entire Place</option>
+                    <option value="Shared Space">Shared Space</option>
+                  </select>
+                </div>
+
+                <div class="form-row">
+                  <div class="selector-group" style="flex: 1; margin-right: 1rem;">
+                    <label class="field-label">How many bedrooms? *</label>
+                    <select name="bedrooms" id="bedrooms" required class="form-select">
+                      <option value="" selected disabled>Choose option</option>
+                      <option value="0">Studio (0)</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5+</option>
+                    </select>
+                  </div>
+
+                  <div class="selector-group" style="flex: 1;">
+                    <label class="field-label">How many bathrooms? *</label>
+                    <select name="bathrooms" id="bathrooms" required class="form-select">
+                      <option value="" selected disabled>Choose option</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4+</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Location Section -->
+              <div class="form-section">
+                <h3 class="section-title">Location Details</h3>
+
+                <div class="selector-group">
+                  <label class="field-label">State *</label>
+                  <select name="state" id="state" required class="form-select">
+                    <option value="" selected disabled>Choose option</option>
+                    <option value="Lagos">Lagos</option>
+                    <option value="Abuja">Abuja (FCT)</option>
+                    <option value="Ogun">Ogun</option>
+                    <option value="Rivers">Rivers</option>
+                    <option value="Delta">Delta</option>
+                    <option value="Abia">Abia</option>
+                    <option value="Enugu">Enugu</option>
+                  </select>
+                </div>
+
+                <div class="selector-group">
+                  <label class="field-label">City/Area *</label>
+                  <select name="city" id="city" required class="form-select">
+                    <option value="" selected disabled>Choose option</option>
+                    <option value="Ikeja">Ikeja</option>
+                    <option value="Lekki">Lekki</option>
+                    <option value="Victoria Island">Victoria Island</option>
+                    <option value="Surulere">Surulere</option>
+                    <option value="Yaba">Yaba</option>
+                    <option value="Gbagada">Gbagada</option>
+                    <option value="Wuse 2">Wuse 2</option>
+                    <option value="Maitama">Maitama</option>
+                  </select>
+                </div>
+
+                <div class="selector-group">
+                  <label class="field-label">Nearest landmark? (Optional)</label>
+                  <select name="landmark" id="landmark" class="form-select">
+                    <option value="" selected>None / Skip</option>
+                    <option value="Shopping Mall">Shopping Mall</option>
+                    <option value="School">School</option>
+                    <option value="Hospital">Hospital</option>
+                    <option value="Airport">Airport</option>
+                    <option value="Bus/Train Station">Bus/Train Station</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Property Details Section -->
+              <div class="form-section">
+                <h3 class="section-title">Property Details</h3>
+
+                <div class="selector-group">
+                  <label class="field-label">What is the monthly rent? (in Naira) *</label>
+                  <input type="number" name="price" id="price" placeholder="Enter monthly rent amount (e.g., 200000)" required min="0" step="1000" class="form-input" />
+                  <small style="display: block; margin-top: 0.5rem; color: #666; font-size: 0.875rem;">Enter the monthly rental amount in Naira</small>
+                </div>
+
+                <div class="form-row">
+                  <div class="selector-group" style="flex: 1; margin-right: 1rem;">
+                    <label class="field-label">Are utilities included in the rent? *</label>
+                    <select name="utilitiesIncluded" id="utilitiesIncluded" required class="form-select">
+                      <option value="" selected disabled>Choose option</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
+                  </div>
+
+                  <div class="selector-group" style="flex: 1;">
+                    <label class="field-label">Are pets allowed? *</label>
+                    <select name="petsAllowed" id="petsAllowed" required class="form-select">
+                      <option value="" selected disabled>Choose option</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="selector-group">
+                  <label class="field-label">Is the property furnished or unfurnished? *</label>
+                  <select name="furnishing" id="furnishing" required class="form-select">
+                    <option value="" selected disabled>Choose option</option>
+                    <option value="Fully Furnished">Fully Furnished</option>
+                    <option value="Semi Furnished">Semi Furnished</option>
+                    <option value="Not Furnished">Not Furnished</option>
+                  </select>
+                </div>
+
+                <div class="selector-group">
+                  <label class="field-label">What amenities are available? (Optional)</label>
+                  <input type="text" name="amenities" id="amenities" placeholder="e.g., Security, WiFi, Parking, Air Conditioning" class="form-input" />
+                </div>
+
+                <div class="selector-group">
+                  <label class="field-label">Primary contact for lease signing and maintenance issues? (Optional)</label>
+                  <div class="tel-box">
+                    <input type="tel" name="contactPhone" id="contactPhone" placeholder="+234 801 234 5678" class="form-input" />
+                    <small style="display: block; margin-top: 0.5rem; color: #666; font-size: 0.875rem;">Enter phone number with country code (e.g., +234 801 234 5678)</small>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Description & Images Section -->
+              <div class="form-section">
+                <h3 class="section-title">Description & Images</h3>
+
+                <div class="selector-group">
+                  <label class="field-label">Property Description *</label>
+                  <textarea name="description" id="description" rows="5" placeholder="Describe your property in detail (minimum 20 characters)..." required minlength="20" class="form-textarea"></textarea>
+                </div>
+
+                <div class="upload-frame">
+                  <div class="upload-file-box">
+                    <label class="field-label">Upload Property Images * (At least 1 image required)</label>
+                    <label for="property-images-upload" class="upload-box">
+                      <span class="upload-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12 15V3M12 3L8 7M12 3L16 7M4 13H20M4 13L6 21H18L20 13M4 13V11C4 9.89543 4.89543 9 6 9H18C19.1046 9 20 9.89543 20 11V13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                      <span>Upload Images or <a href="#">Browse</a></span>
+                    </label>
+                    <input type="file" id="property-images-upload" name="images" accept="image/*" multiple required style="display: none;" />
+                    <small class="upload-hint">You can select multiple images (JPG, PNG, WEBP - Max 5MB each)</small>
+                  </div>
+
+                  <div class="upload-file-box">
+                    <label class="field-label">Upload a valid ID (Optional)</label>
+                    <label for="id-upload" class="upload-box">
+                      <span class="upload-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12 15V3M12 3L8 7M12 3L16 7M4 13H20M4 13L6 21H18L20 13M4 13V11C4 9.89543 4.89543 9 6 9H18C19.1046 9 20 9.89543 20 11V13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                      <span>Upload File or <a href="#">Browse</a></span>
+                    </label>
+                    <input type="file" id="id-upload" name="idDocument" accept="image/*,.pdf" style="display: none;" />
+                  </div>
+
+                  <div class="upload-file-box">
+                    <label class="field-label">Upload proof of ownership or authorization (Optional) e.g (Utility bill / Agent letter)</label>
+                    <label for="ownership-upload" class="upload-box">
+                      <span class="upload-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12 15V3M12 3L8 7M12 3L16 7M4 13H20M4 13L6 21H18L20 13M4 13V11C4 9.89543 4.89543 9 6 9H18C19.1046 9 20 9.89543 20 11V13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                      <span>Upload File or <a href="#">Browse</a></span>
+                    </label>
+                    <input type="file" id="ownership-upload" name="ownershipDocument" accept="image/*,.pdf" style="display: none;" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="button-group" style="margin-top: 3rem; text-align: center;">
+                <button type="submit" id="submitBtn" class="btn btn-submit">
+                  List Now
+                </button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../../assets/scripts/toast.js"></script>
+    <script src="../../assets/scripts/logout.js"></script>
+    <script src="../../assets/scripts/listProperty.js?v=3.0"></script>
+    <script src="../reg-user-dropdown.js"></script>
+  </body>
+</html>

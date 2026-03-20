@@ -1,0 +1,11 @@
+# Render.com Configuration for Roompal Backend
+# This file helps Render understand the project structure
+
+# Build command - install dependencies
+buildCommand: npm install
+
+# Start command - run the server
+startCommand: npm start
+
+# Root directory - Render should run commands from backend directory
+rootDir: backend

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verify your email</title>
+    <link rel="stylesheet" href="./verify-email.css" />
+    <link rel="stylesheet" href="../../dist/output.css" />
+    <link rel="stylesheet" href="../../assets/styles/toast.css" />
+    <link rel="stylesheet" href="../../assets/styles/loading.css" />
+  </head>
+  <body>
+    <main>
+      <div class="verify-email-container w-full">
+        <!-- verify your email overlay-modal -->
+        <div
+          id="verify-email"
+          class="verify-email-overlay rounded-[14px] mx-auto"
+        >
+          <div class="verify-text w-full text-center">
+            <h2>Account Created</h2>
+            <p id="">Your account has been successfully created</p>
+            <div class="email_animation mt-4">
+              <img src="../../assets/images/check-animation.gif" alt="Success" />
+            </div>
+            <div
+              class="okay-btn w-full h-10 rounded-[20px] bg-[#223448] text-white cursor-pointer p-20 flex items-center justify-center"
+            >
+              <button
+                type="button"
+                id="continue-btn"
+                class="p-5 w-full h-full"
+              >
+                Start House hunting
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="verify-info-container">
+          <div class="verify-info-text">
+            <h2>Verify your Email</h2>
+            <p id="email-display">We sent the verification code to your email</p>
+          </div>
+          <form action="#">
+            <div>
+              <p>Enter 6 Digit Code</p>
+              <div class="input-group">
+                <label for="verification-code"
+                  ><img
+                    class="w-6 h-6"
+                    src="../../assets/images/keyboard.png"
+                    alt="Code"
+                /></label>
+                <input type="text" id="verification-code" name="code" maxlength="6" placeholder="Enter 6-digit code" />
+              </div>
+            </div>
+            <div class="bottom-frame">
+              <div class="agreement">
+                <input type="checkbox" />
+                <span>I agree to the terms and conditions</span>
+              </div>
+              <button class="verifyBtn" type="button">Verify</button>
+              <span
+                >Already have an account?
+                <a href="../login.html">Sign In</a></span
+              >
+              <div id="resend-container"></div>
+            </div>
+          </form>
+        </div>
+        <div class="bg-side-image">
+          <div class="bg-side">
+            <h2>Roompal</h2>
+            <p>
+              We are a housing and roommate matching platform built to make
+              finding a place to live simple, safe, and reliable.
+            </p>
+            <!-- <img
+              class="backdrop"
+              src="/frontend/assets/images/blur-blue.png"
+              alt=""
+            /> -->
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../../assets/scripts/api.js"></script>
+    <script src="../../assets/scripts/toast.js"></script>
+    <script src="../../assets/scripts/loading.js"></script>
+    <script src="../../assets/scripts/verifyEmail.js"></script>
+  </body>
+</html>

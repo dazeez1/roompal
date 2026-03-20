@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@font-face {
+  font-family: "Infinite Realities";
+  src: url(/frontend/assets/fonts/Infinite\ Realities.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Gilroy Thin";
+  src: url(/frontend/assets/fonts/Gilroy-Thin.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Gilroy light";
+  src: url(/frontend/assets/fonts/Gilroy-Light.ttf) format("truetype");
+}
+:root {
+  --white: #ffffff;
+  --off-white: #f5f5f5;
+  --black: #000;
+  --footer-color: #f5f5f5;
+  --blue-2: #223448;
+  --ash: #7c7c7c;
+  color: rgb(0, 0, 0, 1);
+}
+* {
+  text-decoration: none;
+  letter-spacing: -0.2px;
+}
+body {
+  font-family: "inter", sans-serif;
+}
+.dropdown-menu.active {
+  display: block;
+}
+.dropdown-menu {
+  background: var(--white);
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.6);
+  width: 320px;
+  border-radius: 20px;
+  height: 178px;
+  z-index: 100;
+  padding: 1rem;
+}
+.dropdown-items {
+  width: 295px;
+  height: 40px;
+  margin-top: 10px;
+}
+.dropdown-items a {
+  cursor: pointer;
+}
+.dropdown-items:hover {
+  background: #f1f1f1;
+}
+.infinite {
+  max-width: 100%;
+  width: 928px;
+  position: relative;
+  padding: 11rem 4rem;
+}
+.infinite strong {
+  font-family: "Infinite Realities", sans-serif;
+  letter-spacing: 5px;
+}
+.infinite p {
+  font-family: "Gilroy light", sans-serif;
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.infinite img {
+  max-width: 100%;
+  height: 474.33px;
+  position: absolute;
+  left: 48%;
+  top: 4%;
+  z-index: 9999;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 4rem;
+}
+.find {
+  padding-top: 1.2rem;
+}
+.contact-us {
+  display: flex;
+  gap: 1.5rem;
+}
+.info span,
+.find p:nth-of-type(1) {
+  font-family: "Gilroy light", sans-serif;
+  font-size: 14px;
+  padding-bottom: 0.7rem;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+}
+.info a {
+  color: var(--black);
+}
+.email,
+.state {
+  font-family: "Gilroy light", sans-serif;
+}

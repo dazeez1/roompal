@@ -1,0 +1,160 @@
+/**
+ * Loading Spinner Styles
+ */
+
+.loading-spinner {
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.spinner-icon {
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+}
+
+.spinner-circle {
+  opacity: 0.6;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Button loading state */
+button:disabled,
+button[disabled] {
+  opacity: 0.7 !important;
+  cursor: not-allowed !important;
+  pointer-events: none;
+}
+
+/* Form loading state */
+form.loading input,
+form.loading button,
+form.loading textarea,
+form.loading select {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Loading Overlay with Animated Spinner */
+.loading-overlay {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.spinner-container {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.spinner-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 4px solid transparent;
+  border-top-color: #223448;
+  border-radius: 50%;
+  animation: spin-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+
+.spinner-ring:nth-child(1) {
+  animation-delay: -0.45s;
+  border-top-color: #223448;
+  opacity: 1;
+}
+
+.spinner-ring:nth-child(2) {
+  animation-delay: -0.3s;
+  border-top-color: #3a4d63;
+  opacity: 0.8;
+  width: 70%;
+  height: 70%;
+  top: 15%;
+  left: 15%;
+}
+
+.spinner-ring:nth-child(3) {
+  animation-delay: -0.15s;
+  border-top-color: #5a6d83;
+  opacity: 0.6;
+  width: 50%;
+  height: 50%;
+  top: 25%;
+  left: 25%;
+}
+
+.spinner-ring:nth-child(4) {
+  animation-delay: 0s;
+  border-top-color: #7a8da3;
+  opacity: 0.4;
+  width: 30%;
+  height: 30%;
+  top: 35%;
+  left: 35%;
+}
+
+@keyframes spin-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Shimmer effect for skeleton loaders */
+.property-skeleton {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    #e9e0cf 0%,
+    #f5f0e8 20%,
+    #e9e0cf 40%,
+    #e9e0cf 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Pulse animation for skeleton cards */
+.property-skeleton {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}

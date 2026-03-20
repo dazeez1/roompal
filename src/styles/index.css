@@ -1,0 +1,404 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
+@font-face {
+  font-family: "Infinite Realities";
+  src: url(/frontend/assets/fonts/Infinite\ Realities.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Gilroy Thin";
+  src: url(/frontend/assets/fonts/Gilroy-Thin.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Gilroy light";
+  src: url(/frontend/assets/fonts/Gilroy-Light.ttf) format("truetype");
+}
+:root {
+  --white: #ffffff;
+  --off-white: #f5f5f5;
+  --black: #000;
+  --footer-color: #f5f5f5;
+  --blue-2: #223448;
+  --ash: #7c7c7c;
+  color: rgb(0, 0, 0, 1);
+}
+* {
+  text-decoration: none;
+  letter-spacing: -0.2px;
+}
+body {
+  font-family: "Inter", sans-serif;
+}
+/* MAIN */
+.hero-frame {
+  padding: 2rem;
+}
+.your-home {
+  padding-block: 1rem;
+}
+.your-home h2 {
+  width: 100%;
+  font-weight: 550;
+}
+.your-home p {
+  max-width: 366px;
+  width: 100%;
+  line-height: 150%;
+  text-align: right;
+  font-size: 18px;
+}
+.get-a-space-container {
+  width: 100%;
+  background: url("/frontend/assets/images/3d-rendering-house-model-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+  border-radius: 20px;
+  aspect-ratio: 16/9;
+  display: flex;
+  flex-direction: column;
+}
+.two-con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+}
+.fia-links {
+  background: var(--white);
+  max-width: 580px;
+  width: 100%;
+  height: 64px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px 10px 0px 0px;
+}
+.fia-links a {
+  color: var(--ash);
+}
+.find-apartment {
+  background: var(--blue-2);
+  color: var(--white) !important;
+  border-radius: 20px;
+  padding: 10px;
+  max-width: 183px;
+  height: auto;
+}
+.apartment-locations {
+  background: var(--white);
+  width: 100%;
+  max-width: 1000px;
+  height: 100px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.select-div {
+  width: 292px;
+}
+.what-we-do-heading {
+  font-size: 3rem;
+  text-align: center;
+  width: 100%;
+}
+.wwd-card {
+  color: #e9e0cf;
+  background: var(--off-white);
+  border-radius: 20px;
+  width: 390px;
+  max-width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+}
+.wwd-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.wwd-text span {
+  color: var(--ash);
+}
+.wwd-text a {
+  background: var(--blue-2);
+  color: var(--white);
+  font-size: 1.1rem;
+  max-width: 150px;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  margin-top: 1rem;
+}
+.wwd-image {
+  max-width: 100%;
+}
+.wwd-image img {
+  max-width: 290px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.figure {
+  overflow: hidden;
+}
+.get-a-space-container,
+.figure {
+  padding: 3.5rem;
+  position: relative;
+  max-width: 100%;
+}
+.figure img {
+  width: 100%;
+  /* aspect-ratio: 16/4; */
+  object-fit: cover;
+  border-radius: 20px;
+}
+.figure-text {
+  font-size: 128px;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: absolute;
+  bottom: 4rem;
+  width: 100%;
+}
+.figure-text span {
+  width: 305px;
+  max-width: 100%;
+  height: 13px;
+  border-radius: 20px;
+  background: var(--white);
+}
+.roompal-background {
+  background: url("/frontend/assets/images/3d-rendering-loft-luxury-living-room-with-shelf-near-dining-table-1.png");
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: cover;
+  background-attachment: scroll;
+  aspect-ratio: 16/9;
+  border-radius: 20px;
+  position: relative;
+}
+.roompal-background div {
+  position: absolute;
+  top: 70%;
+}
+.why-us-section {
+  padding-block: 3rem;
+}
+.why-us-container {
+  max-width: 1294px;
+  width: 100%;
+  border-radius: 20px;
+  margin: 2rem auto;
+}
+.featured__0 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+/* carousel */
+.testimonial-heading h2 {
+  padding: 10px 0px 5px 0px;
+}
+.testimonial-heading p:first-child {
+  color: var(--ash);
+  font-family: "DM Mono", monospace;
+  font-weight: 300;
+  font-style: normal;
+}
+/* media queries */
+@media (max-width: 1000px) {
+  .hero-frame {
+    padding: 10px;
+  }
+  .your-home h2 {
+    font-size: 38px;
+  }
+}
+@media (max-width: 810px) {
+  .explore-prop {
+    padding-inline: 16px;
+  }
+  .roompal-background h2 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 769px) {
+  .your-home {
+    display: block;
+    padding: 1rem;
+  }
+  .your-home h2 {
+    font-size: 28px;
+  }
+  .your-home p {
+    text-align: center;
+    max-width: 100%;
+    padding-top: 10px;
+    color: var(--ash);
+  }
+  .get-a-space-container {
+    background: none;
+    aspect-ratio: 0;
+    padding: 1rem;
+  }
+  .apartment-locations {
+    padding: 10px;
+  }
+  .fia-links,
+  .apartment-locations {
+    max-width: 100%;
+  }
+  .fia-links a {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .what-we-do-heading {
+    font-size: 24px;
+    font-weight: 500;
+    padding-bottom: 1rem;
+  }
+  .post {
+    display: block;
+    text-align: center;
+  }
+  .post p,
+  .discover p,
+  .post a {
+    display: none;
+  }
+  .post h2 {
+    text-align: center;
+    padding-block: 1rem;
+    font-size: 24px;
+  }
+  .explore-prop {
+    padding-inline: 10px;
+  }
+  .explore-prop h2 {
+    font-size: 20px;
+  }
+  .why-us-text p:not(:last-child) {
+    font-size: 20px;
+  }
+}
+@media (max-width: 639px) {
+  .wwd-card-image img {
+    height: 166px;
+    width: 144px;
+  }
+  .faq-question,
+  .faq-answer {
+    font-size: 1rem;
+  }
+  .select-div,
+  .select-div p,
+  .search-div,
+  .find-apartment {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .select-div select {
+    padding: 0px;
+  }
+  .wwd-text span,
+  .wwd-text p,
+  .wwd-text a {
+    font-size: 14px;
+  }
+  .reduce {
+    aspect-ratio: 10/10;
+  }
+}
+@media (max-width: 518px) {
+  .your-home h2 {
+    font-size: 24px;
+  }
+  .wwd-text a {
+    margin-top: 4px;
+  }
+}
+@media (max-width: 480px) {
+  .get-a-space-container {
+    padding: 5px;
+  }
+  .your-home p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 426px) {
+  .wwd-card-parent p,
+  .wwd-card-parent-2 p {
+    padding-bottom: 0px;
+  }
+  .wwd-text {
+    padding: 5px;
+  }
+  .roompal-background h2 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 404px) {
+  .wwd-text {
+    padding: 10px;
+  }
+  .wwd-text p {
+    font-size: 12px;
+  }
+  .wwd-text span {
+    font-size: 12px;
+  }
+  .wwd-text a {
+    font-size: 12px;
+  }
+  .wwd-card-parent,
+  .wwd-card-parent-2 {
+    gap: 0;
+  }
+  .fia-links {
+    padding: 0px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 350px) {
+  .fia-links {
+    padding: 10px;
+    gap: 5px;
+  }
+  .select-div select {
+    padding: 1px;
+    font-size: 10px;
+  }
+  .fia-links a {
+    font-size: 10px !important;
+  }
+}
+@media (min-width: 769px) {
+  .your-home h2 {
+    font-size: 50px;
+    max-width: 400px;
+  }
+}
+@media (min-width: 1030px) {
+  .your-home h2 {
+    font-size: 64px;
+    max-width: 516px;
+  }
+}
+@media (min-width: 810px) {
+  .roompal-background {
+    font-size: 100px;
+  }
+}

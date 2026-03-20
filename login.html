@@ -1,0 +1,112 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Roompal</title>
+    <link rel="stylesheet" href="dist/output.css" />
+    <link rel="stylesheet" href="src/styles/login.css" />
+    <link rel="stylesheet" href="assets/styles/toast.css" />
+    <link rel="stylesheet" href="assets/styles/loading.css" />
+  </head>
+  <body class="m-0 p-0 border-box">
+    <main>
+      <section class="min-h-screen">
+        <div class="grid lg:grid-cols-2 items-stretch">
+          <div class="w-full p-20">
+            <h2 class="text-5xl font-medium pb-3">Sign in</h2>
+            <p class="text-[#7c7c7c] text-xl pb-4">
+              Enter your credential to create an account with us
+            </p>
+            <div class="log-in flex items-center gap-8">
+              <a
+                href=""
+                class="w-[70%] h-11 bg-[#f5f5f5] font-medium rounded-full flex items-center justify-center gap-3"
+              >
+                <img
+                  class="w-4 h-4"
+                  src="assets/images/devicon_google.png"
+                  alt=""
+                />Log in with google</a
+              >
+              <a
+                href=""
+                class="w-[70%] h-11 bg-[#f5f5f5] font-medium rounded-lg flex items-center justify-center gap-3"
+                ><img
+                  class="w-4 h-4"
+                  src="assets/images/Vector-(4).png"
+                  alt=""
+                />Log in with Apple</a
+              >
+            </div>
+            <form id="login-form" class="mt-10">
+              <div class="w-full mb-5">
+                <label class="flex flex-col mb-3" for="login-email"
+                  >Email Address</label
+                >
+                <input
+                  id="login-email"
+                  class="w-full h-11 bg-[#f1f1f1] pl-4.5 rounded-lg border border-transparent focus:border-[#223448] focus:outline-none"
+                  type="email"
+                  placeholder="write your Email"
+                  required
+                />
+              </div>
+              <div class="w-full mb-5">
+                <label class="flex flex-col mb-3" for="login-password"
+                  >Password</label
+                >
+                <input
+                  id="login-password"
+                  class="w-full h-11 bg-[#f1f1f1] pl-4.5 rounded-lg border border-transparent focus:border-[#223448] focus:outline-none"
+                  type="password"
+                  placeholder="Enter password"
+                  required
+                />
+              </div>
+              <div class="mt-5 flex items-center gap-3 mb-5">
+                <input type="checkbox" id="remember-me" class="w-4 h-4 accent-[#223448]" />
+                <label for="remember-me">Remember me</label>
+              </div>
+              <button
+                type="submit"
+                id="login-submit-btn"
+                class="bg-[#223448] text-[#e9e0cf] w-full rounded-full h-10 flex items-center justify-center cursor-pointer mb-4 border-none"
+              >
+                <span class="button-text">Sign in</span>
+              </button>
+              <span
+                >Do not have an account?
+                <a class="text-green-700" href="register.html">Sign up</a></span
+              >
+            </form>
+          </div>
+          <div class="w-full">
+            <div
+              class="bg-side"
+              style="
+                background: url(&quot;./assets/images/3d-rendering-house-model-\(1\)-1.png&quot;);
+                background-size: cover;
+                background-position: center center;
+                position: relative;
+                min-height: 1024px;
+                color: var(--text-color);
+                border-top-left-radius: 15px;
+              "
+            >
+              <h2>Roompal</h2>
+              <p>
+                We are a housing and roommate matching platform built to make
+                finding a place to live simple, safe, and reliable.
+              </p>
+              <img class="backdrop" src="assets/images/blur-blue.png" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./assets/scripts/api.js"></script>
+    <script src="./assets/scripts/toast.js"></script>
+    <script src="./assets/scripts/loading.js"></script>
+    <script src="./assets/scripts/login.js"></script>
+  </body>
+</html>

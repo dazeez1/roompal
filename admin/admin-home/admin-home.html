@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="./admin-home.css" />
+  </head>
+  <body>
+    <header>
+      <div class="name"><a href="./admin-home.html">Roompal</a></div>
+      <nav>
+        <ul class="link-container">
+          <li>
+            <a style="color: white" href="../admin-home/admin-home.html"
+              >Dashboard</a
+            >
+          </li>
+          <li><a href="../houses/houses.html">Houses</a></li>
+          <li>
+            <a href="../admin-roommate-listing/ad-roommies.html">roommates</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="user-page">
+        <a href="/frontend/pages/reg-users/homepage/home.html"
+          >Switch to user's page</a
+        >
+      </div>
+    </header>
+    <main>
+      <section>
+        <div class="hero-section-container">
+          <div
+            class="hero-card"
+            style="background: var(--primary-color); color: white"
+          >
+            <div class="inner-card">
+              <div><img src="../images/icon-1.png" /></div>
+              <div class="stats">
+                <p id="number">0</p>
+                <p>Active Listing</p>
+              </div>
+            </div>
+          </div>
+          <div class="hero-card">
+            <div class="inner-card">
+              <div>
+                <img src="../images/icon-2.png" />
+              </div>
+              <div class="stats">
+                <p id="number">0</p>
+                <p>Pending ID Verifications</p>
+              </div>
+            </div>
+          </div>
+          <div class="hero-card">
+            <div class="inner-card">
+              <div><img src="../images/icon-4.png" /></div>
+              <div class="stats">
+                <p id="number">0</p>
+                <p>Successful Matches</p>
+              </div>
+            </div>
+          </div>
+          <div class="hero-card">
+            <div class="inner-card">
+              <div><img src="../images/icon-3.png" /></div>
+              <div class="stats">
+                <p id="number">0</p>
+                <p>Flagged Listings</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

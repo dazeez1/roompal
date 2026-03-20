@@ -1,0 +1,13 @@
+# Render.com Configuration for Roompal Backend
+services:
+  - type: web
+    name: roompal-backend
+    env: node
+    # Set root directory to backend folder
+    rootDir: backend
+    # Build command runs from backend directory
+    buildCommand: npm install
+    # Start command - uses npm start which runs "node src/index.js"
+    startCommand: npm start
+    # Health check endpoint
+    healthCheckPath: /api/health

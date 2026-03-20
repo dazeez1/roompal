@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin roommate Listing</title>
+    <link rel="stylesheet" href="./ad-roomate-listing.css" />
+  </head>
+  <body>
+    <header>
+      <div class="name"><a href="./admin-home.html">Roompal</a></div>
+      <nav>
+        <ul class="link-container">
+          <li>
+            <a href="../admin-home/admin-home.html">Dashboard</a>
+          </li>
+          <li><a href="../houses/houses.html">Houses</a></li>
+          <li>
+            <a
+              style="color: white"
+              href="../admin-roommate-listing/ad-roommies.html"
+              >roommates</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="user-page">
+        <a href="/frontend/pages/reg-users/homepage/home.html"
+          >Switch to user's page</a
+        >
+      </div>
+    </header>
+    <main>
+      <section>
+        <div class="hero-section-container">
+          <div
+            class="hero-card"
+            style="background: var(--primary-color); color: white"
+          >
+            <div class="inner-card">
+              <div><img src="../images/icon-5.png" /></div>
+              <div class="stats">
+                <p id="number">0</p>
+                <p>Total number of roommate seekers</p>
+              </div>
+            </div>
+          </div>
+          <div class="hero-card">
+            <div class="inner-card">
+              <div>
+                <img src="../images/message.png" />
+              </div>
+              <div class="stats">
+                <p id="number">0</p>
+                <p>Total number of roommate’s chatting</p>
+              </div>
+            </div>
+          </div>
+          <div class="hero-card">
+            <div class="inner-card">
+              <div><img src="../images/icon-4.png" /></div>
+              <div class="stats">
+                <p id="number">0</p>
+                <p>Total number of roommate’s chatting</p>
+              </div>
+            </div>
+          </div>
+          <div class="hero-card">
+            <div class="inner-card">
+              <div><img src="../images/icon-3.png" /></div>
+              <div class="stats">
+                <p id="number">0</p>
+                <p>Total number of roommate’s chatting</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="table-wrapper">
+        <div class="table-container">
+          <table class="table" id="table-one">
+            <thead>
+              <tr class="table-row">
+                <th class="table-cell">Id</th>
+                <th class="table-cell">Full Name</th>
+                <th class="table-cell">Date joined</th>
+                <th class="table-cell">Email</th>
+                <th class="table-cell">Phone Number</th>
+                <th class="table-cell">Last Login Time</th>
+                <th class="table-cell">Status</th>
+              </tr>
+            </thead>
+            <tbody id="data-container">
+              <tr class="table-row">
+                <td class="table-cell">1</td>
+                <td class="table-cell">
+                  <div class="character-elem">
+                    <span class="character-avatar">
+                      <img
+                        src="/frontend/assets/images/avatar-5.png"
+                        alt="character image"
+                      />
+                    </span>
+                    <span class="character-name no-wrap">Grace Joy</span>
+                  </div>
+                </td>
+                <td class="table-cell">01/02/2025</td>
+                <td class="table-cell">shittubusayo@gmail.com</td>
+                <td class="table-cell">08106537022</td>
+                <td class="table-cell">10/01/2025</td>
+                <td class="table-cell" id="successful">sucessful</td>
+              </tr>
+              <tr class="table-row">
+                <td class="table-cell">1</td>
+                <td class="table-cell">
+                  <div class="character-elem">
+                    <span class="character-avatar">
+                      <img
+                        src="/frontend/assets/images/avatar-5.png"
+                        alt="character image"
+                      />
+                    </span>
+                    <span class="character-name no-wrap">Grace Joy</span>
+                  </div>
+                </td>
+                <td class="table-cell">01/02/2025</td>
+                <td class="table-cell">shittubusayo@gmail.com</td>
+                <td class="table-cell">08106537022</td>
+                <td class="table-cell">10/01/2025</td>
+                <td class="table-cell" id="successful">sucessful</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <table class="table" id="table-fixed"></table>
+      </div>
+    </main>
+  </body>
+</html>

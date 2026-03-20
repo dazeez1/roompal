@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
+@font-face {
+  font-family: "Infinite Realities";
+  src: url("/frontend/assets/fonts/Infinite\ Realities.otf") format("truetype");
+}
+@font-face {
+  font-family: "Gilroy Thin";
+  src: url("/frontend/assets/fonts/Gilroy-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Gilroy light";
+  src: url("/frontend/assets/fonts/Gilroy-Light.ttf") format("truetype");
+}
+:root {
+  --white: #ffffff;
+  --off-white: #f5f5f5;
+  --black: #000;
+  --footer-color: #f5f5f5;
+  --blue-2: #223448;
+  --ash: #7c7c7c;
+  --ash-2: #ababab;
+  color: #fafafa;
+}
+* {
+  text-decoration: none;
+  letter-spacing: -0.2px;
+}
+body {
+  background: var(--white);
+  font-family: "inter", sans-serif;
+}
+
+/* MAIN */
+.hero-section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.who-are-we {
+  max-height: 138px;
+  height: 100%;
+  max-width: 1240px;
+  width: 100%;
+  /* padding: 184px 0rem 0rem; */
+}
+.who-are-we p {
+  font-family: "DM Mono", monospace;
+  color: var(--ash);
+  text-transform: uppercase;
+}
+.who-are-we h1 {
+  text-align: left;
+  font-size: 48px;
+  font-weight: 400;
+}
+.hero-image {
+  border-radius: 20px;
+}
+.about-us-text {
+  padding: 1rem;
+}
+
+@media (max-width: 900px) {
+  .about-us-text h2 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 800px) {
+  .about-us-text p {
+    max-width: 250px;
+  }
+}
+@media (max-width: 500px) {
+  .about-us-text h2 {
+    font-size: 20px;
+  }
+  .about-us-text p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 430px) {
+  .about-us-container div {
+    flex-wrap: wrap;
+  }
+  .about-us-container div:last-child {
+    flex-wrap: wrap-reverse;
+  }
+  .about-us-text p {
+    max-width: 330px;
+  }
+  .about-us-image img {
+    padding: 10px;
+    border-radius: 20px;
+  }
+}

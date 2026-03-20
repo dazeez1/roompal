@@ -1,0 +1,36 @@
+{
+  "name": "roompal",
+  "version": "1.0.0",
+  "description": "Roompal - Property Listing & Roommate Matching Platform",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd backend && npm start",
+    "dev": "cd backend && npm run dev",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "dev:css": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dev-Sayo/roompal.git"
+  },
+  "keywords": [
+    "roompal",
+    "property-listing",
+    "roommate-matching"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Dev-Sayo/roompal/issues"
+  },
+  "homepage": "https://github.com/Dev-Sayo/roompal#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "tailwindcss": "^4.1.18"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}

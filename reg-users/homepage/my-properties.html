@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Properties - Roompal</title>
+    <link rel="stylesheet" href="../reg-user.css" />
+    <link rel="stylesheet" href="../../assets/styles/toast.css" />
+    <link rel="stylesheet" href="../../assets/styles/loading.css" />
+    <style>
+      .status-badge {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      .status-pending {
+        background: #fef3c7;
+        color: #92400e;
+      }
+      .status-approved {
+        background: #d1fae5;
+        color: #065f46;
+      }
+      .status-flagged {
+        background: #fee2e2;
+        color: #991b1b;
+      }
+      .properties-header {
+        padding: 20px;
+        background: white;
+        border-radius: 12px;
+        margin-bottom: 20px;
+      }
+      .properties-header h1 {
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      .properties-header p {
+        color: #6b7280;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav-mobile">
+        <button class="back-btn" aria-label="Go back" onclick="window.history.back()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M15 18L9 12L15 6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <h1 class="nav-title">My Properties</h1>
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M3 12H21M3 6H21M3 18H21"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="nav-dropdown">
+        <div class="dropdown-links">
+          <a class="dropdown-header" href="./home.html">Roompal</a>
+          <a href="./home.html">Find Apartment</a>
+          <a href="../roommate/roommate.html">Find roommate</a>
+          <a href="../list-a-house/list-a-house.html">List a House</a>
+          <a href="../message/in-app-message.html">Message</a>
+          <a href="">Notification</a>
+          <a href="../need-help/need-help.html">Need Help</a>
+        </div>
+      </div>
+      <div class="nav-side__1">
+        <a class="home" href="./home.html">roompal</a>
+        <div class="link">
+          <a href="./home.html">Find an Apartment</a>
+          <a href="../roommate/roommate.html">Find a roommate</a>
+          <a href="../list-a-house/list-a-house.html">List a House</a>
+          <a href="../message/in-app-message.html">Messages</a>
+        </div>
+      </div>
+      <div class="side-two">
+        <button class="logout-btn" onclick="handleLogout()" title="Logout">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+          </svg>
+          Logout
+        </button>
+        <span
+          ><a class="need-help" href="../need-help/need-help.html"
+            >Need Help?</a
+          ></span
+        >
+      </div>
+    </nav>
+    <main style="padding: 20px; background: #f5f5f5; min-height: 100vh;">
+      <div class="properties-header">
+        <h1>My Properties</h1>
+        <p>Manage your listed properties</p>
+        <a
+          href="../list-a-house/list-a-house.html"
+          class="inline-block mt-4 px-6 py-2 bg-[#223448] text-white rounded-full hover:bg-[#1a2838] transition"
+        >
+          + List New Property
+        </a>
+      </div>
+      <div
+        id="my-properties-container"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+      >
+        <!-- Properties will be loaded here -->
+      </div>
+    </main>
+    <script src="../../assets/scripts/api.js"></script>
+    <script src="../../assets/scripts/toast.js"></script>
+    <script src="../../assets/scripts/propertyUtils.js"></script>
+    <script src="../../assets/scripts/myProperties.js"></script>
+    <script src="../../assets/scripts/authGuard.js"></script>
+    <script src="../reg-user-dropdown.js"></script>
+  </body>
+</html>

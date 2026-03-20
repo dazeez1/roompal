@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roommate Details</title>
+    <link rel="stylesheet" href="../reg-user.css" />
+    <link rel="stylesheet" href="roommate-info.css" />
+    <style>
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      .loading-spinner {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav-mobile">
+        <button class="back-btn" aria-label="Go back">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M15 18L9 12L15 6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <h1 class="nav-title">Find Apartment</h1>
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M3 12H21M3 6H21M3 18H21"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="nav-dropdown">
+        <div class="dropdown-links">
+          <a class="dropdown-header" href="../homepage/home.html">Roompal</a>
+          <a href="../homepage/home.html">Find Apartment</a>
+          <a href="../roommate/roommate.html">Find roommate</a>
+          <a href="../list-a-house/list-a-house.html">List a House</a>
+          <a href="../message/in-app-message.html">Message</a>
+          <a href="">Notification</a>
+          <a href="../need-help/need-help.html">Need Help</a>
+        </div>
+      </div>
+      <div class="nav-side__1">
+        <a class="home" href="../../index.html">roompal</a>
+        <div class="link">
+          <a href="../homepage/home.html">Find an Apartment</a>
+          <a href="../roommate/roommate.html">Find a roommate</a>
+          <a href="../list-a-house/list-a-house.html">List a House</a>
+          <a href="../message/in-app-message.html">Messages</a>
+        </div>
+      </div>
+      <div class="side-two">
+        <div>
+          <span class="notification"
+            ><img src="../images/notification-bell.png" alt=""
+          /></span>
+          <div style="display: none" class="notification-container">
+            <div class="notification-modal">
+              <div class="frame-parent">
+                <div class="frame-wrapper">
+                  <div class="notifications-wrapper">
+                    <div class="notifications">Notifications</div>
+                  </div>
+                </div>
+                <!-- Notifications will be dynamically loaded here -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <span
+          ><a class="need-help" href="../need-help/need-help.html"
+            >Need Help?</a
+          ></span
+        >
+      </div>
+    </nav>
+    <div class="property-container">
+      <a class="back-nav" href="roommate.html" target="_self">← Go back</a>
+
+      <!-- Loading Spinner -->
+      <div id="loadingSpinner" class="loading-spinner" style="display: flex; justify-content: center; align-items: center; min-height: 400px; flex-direction: column;">
+        <div style="width: 50px; height: 50px; border: 4px solid #f3f3f3; border-top: 4px solid #223448; border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 1rem;"></div>
+        <p style="color: #666; font-size: 14px;">Loading roommate profile...</p>
+      </div>
+
+      <!-- Content Container (hidden initially) -->
+      <div id="contentContainer" style="display: none;">
+      <div class="main-image">
+        <img id="mainImage" src="../images/man-1.png" />
+      </div>
+      <div class="roommate-content">
+        <div class="left-column">
+          <section class="roommate-section">
+            <h2 class="section-title">Name</h2>
+            <p class="property-title-text">Owen mitchel</p>
+          </section>
+          <section class="roommate-section">
+            <h2 class="section-title">Age</h2>
+            <p>25 - 38</p>
+          </section>
+          <section class="roommate-section">
+            <h2 class="section-title">Religion</h2>
+            <p>Christianity</p>
+          </section>
+          <section class="roommate-section">
+            <h2 class="section-title">Gender</h2>
+            <p>Female</p>
+          </section>
+          <section class="roommate-section">
+            <h2 class="section-title">Contact</h2>
+            <a class="agent-number" id="roommate-contact-link" href="#">Loading...</a>
+          </section>
+          <section class="roommate-section">
+            <h2 class="section-title">Preferred State</h2>
+            <p>Lagos, Nigeria</p>
+          </section>
+          <section class="roommate-section">
+            <h2 class="section-title">Preferred area</h2>
+            <p>Gbagada / Anthony / Yaba</p>
+          </section>
+          <section class="roommate-section">
+            <h2 class="section-title">Any health challenge</h2>
+            <p>No</p>
+          </section>
+        </div>
+        <div class="right-column">
+          <section class="roommate-section details-card">
+            <h2 class="section-title">When is your preferred move-in time?</h2>
+            <p>Within 1 month</p>
+          </section>
+          <section class="roommate-section details-card">
+            <h2 class="section-title">Do you smoke / drink?</h2>
+            <p class="location-text">No</p>
+          </section>
+          <section class="roommate-section details-card">
+            <h2 class="section-title">
+              Are you okay with a roommate that smokes / drinks?
+            </h2>
+            <p class="availability-text">Not okay with either</p>
+          </section>
+          <section class="roommate-section details-card">
+            <h2 class="section-title">
+              In one sentence, what kind of roommate are you?
+            </h2>
+            <p>
+              A calm, respectful, and clean roommate who values peace and good
+              communication.
+            </p>
+          </section>
+          <section class="roommate-section details-card">
+            <h2 class="section-title">
+              In one sentence, what kind of roommate are you?
+            </h2>
+            <p>
+              A calm, respectful, and clean roommate who values peace and good
+              communication.
+            </p>
+          </section>
+          <section class="roommate-section details-card">
+            <h2 class="section-title">What is your Work / daily schedule?</h2>
+            <p>Working professional (Remote based)</p>
+          </section>
+          <section class="roommate-section details-card">
+            <h2 class="section-title">What is your lifestyle vibe?</h2>
+            <p>Balanced</p>
+          </section>
+          <section class="roommate-section details-card">
+            <h2 class="section-title">What is your cleanliness level?</h2>
+            <p>High (very neat and organized)</p>
+          </section>
+        </div>
+      </div>
+      <div class="contact-btn">
+        <button id="contactBtn">
+          <img src="../images/request-icon.png" alt="" />Request Match
+        </button>
+
+        <a href="../message/in-app-message.html"
+          ><img src="../images/message.png" alt="" /> Chat</a
+        >
+      </div>
+      </div>
+      <!-- End Content Container -->
+      <!-- popups -->
+      <div class="confirmation-frame" style="display: none;">
+        <div class="inner-content content-2">
+          <img src="../images/question-mark.png" alt="" />
+          <h2>
+            Are you sure you want to get matched with this user as a roommate?
+          </h2>
+          <div class="com-div">
+            <a class="leave" href="#" onclick="event.preventDefault(); document.querySelector('.confirmation-frame').style.display='none';">No</a>
+            <a class="chat" href="#" onclick="event.preventDefault();">Yes</a>
+          </div>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="loading_1" style="display: none;">
+        <div class="inner-content__1">
+          <img src="../images/loading.png" alt="" />
+          <div>
+            <h2>Match making roommate</h2>
+            <p>Have a little patience</p>
+          </div>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="request-checked" style="display: none;">
+        <div class="inner-content">
+          <p>
+            We have successfully sent your roommate request. They need to accept you now as a roommate. Note that you can chat them up while you wait.
+          </p>
+          <div class="com-div">
+            <a class="leave" href="roommate.html" target="_parent">Leave</a>
+            <a class="chat" href="../message/in-app-message.html">Chat</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../../assets/scripts/api.js"></script>
+    <script src="../../assets/scripts/toast.js"></script>
+    <script src="../../assets/scripts/notificationIntegration.js"></script>
+    <script src="../../assets/scripts/roommateInfo.js?v=2.0"></script>
+    <script src="../reg-user-dropdown.js"></script>
+  </body>
+</html>
